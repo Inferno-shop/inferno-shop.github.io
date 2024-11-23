@@ -1,0 +1,247 @@
+<head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Inferno</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="https://cdn.discordapp.com/icons/1234763287120580638/f429266f56834c221ffb03f75f79ebfb.png?size=4096" alt="Logo Inferno" class="logo">
+                <h1>Tienda Inferno</h1>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-trigger">
+                            <i class="fas fa-tags"></i> Categorías <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="rangos.html" class="submenu-trigger">
+                                    <i class="fas fa-crown"></i> Rangos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="rangos.html#permanentes"><i class="fas fa-infinity"></i> Permanentes</a></li>
+                                    <li><a href="rangos.html#temporales"><i class="fas fa-clock"></i> Temporales</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="cosmeticos.html" class="submenu-trigger">
+                                    <i class="fas fa-magic"></i> Cosméticos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="tags.html"><i class="fas fa-tag"></i> Tags</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-sparkles"></i> Auras (Próximamente)</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-paw"></i> Mascotas (Próximamente)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="items.html" class="submenu-trigger">
+                                    <i class="fas fa-cube"></i> Ítems
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="items.html#picos"><i class="fas fa-hammer"></i> Picos</a></li>
+                                    <li><a href="items.html#espadas"><i class="fas fa-sword"></i> Espadas</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-axe"></i> Hachas (Próximamente)</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-bow-arrow"></i> Arcos (Próximamente)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="minas.html" class="submenu-trigger">
+                                    <i class="fas fa-gem"></i> Minas personales
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="minas.html#custom"><i class="fas fa-paint-brush"></i> Customizables</a></li>
+                                    <li><a href="minas.html#plantilla"><i class="fas fa-copy"></i> Plantilla</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="comandos.html" class="submenu-trigger">
+                                    <i class="fas fa-terminal"></i> Comandos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="comandos.html#permanentes"><i class="fas fa-infinity"></i> Permanentes</a></li>
+                                    <li><a href="comandos.html#temporales"><i class="fas fa-clock"></i> Temporales</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="server-info">ah
+            <div class="server-header">
+                <h2>Bienvenido a Inferno</h2>
+                <p class="server-description">Tu servidor de Minecraft favorito</p>
+            </div>
+
+            <div class="server-stats">
+                <!-- IP del Servidor -->
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>IP del Servidor</h3>
+                    <div class="ip-container" onclick="copyIP()">
+                        <span id="serverIP">1nf3rn0MC.aternos.me</span>
+                        <i class="fas fa-copy"></i>
+                        <span class="tooltip">Click para copiar</span>
+                    </div>
+                </div>
+
+                <!-- Versiones -->
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Versiones</h3>
+                    <p class="version-text">1.16.5 - 1.20.x</p>
+                </div>
+
+                <!-- Estado del Servidor -->
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-signal"></i>
+                    </div>
+                    <h3>Estado del Servidor</h3>
+                    <div class="server-status online">
+                        <span class="status-dot"></span>
+                        <span>Online</span>
+                    </div>
+                </div>
+
+                <!-- Jugadores Online -->
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Jugadores Online</h3>
+                    <div class="player-count">
+                        <span id="onlinePlayers">0</span>
+                        <span class="separator">/</span>
+                        <span id="maxPlayers">20</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enlaces Rápidos -->
+            <div class="quick-links">
+                <a href="https://discord.gg/tuservidor" class="social-link discord">
+                    <i class="fab fa-discord"></i>
+                    Discord
+                </a>
+                <a href="https://store.inferno.com" class="social-link store">
+                    <i class="fas fa-shopping-cart"></i>
+                    Tienda
+                </a>
+                <a href="https://wiki.inferno.com" class="social-link wiki">
+                    <i class="fas fa-book"></i>
+                    Wiki
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-header">
+                <h2>Contáctanos</h2>
+                <p class="contact-subtitle">¿Tienes alguna pregunta? ¡Estamos aquí para ayudarte!</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Información de contacto -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horario de Atención</h3>
+                        <p>24/7 - Soporte continuo</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>soporte@infernomc.com</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fab fa-discord"></i>
+                        <h3>Discord</h3>
+                        <p>discord.gg/infernomc</p>
+                    </div>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <div class="contact-form-container">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Selecciona un asunto</option>
+                                <option value="soporte">Soporte técnico</option>
+                                <option value="compras">Consulta sobre compras</option>
+                                <option value="bugs">Reportar bug</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="message" name="message" placeholder="Tu mensaje" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-button">
+                            <span>Enviar mensaje</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="formStatus" class="form-status"></div>
+                </div>
+            </div>
+
+            <!-- Enlaces rápidos -->
+            <div class="quick-contact-links">
+                <a href="https://discord.gg/gx2fJPKb" class="quick-link discord">
+                    <i class="fab fa-discord"></i>
+                    <span>Unirse al Discord</span>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

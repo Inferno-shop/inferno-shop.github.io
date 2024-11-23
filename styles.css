@@ -1,0 +1,1838 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+:root {
+    --primary-red: #8b0000;
+    --dark-red: #4a0404;
+    --black: #0a0a0a;
+    --accent: #ff4444;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark-red) 100%);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-brand .logo {
+    height: 60px;
+    width: auto;
+}
+
+.nav-brand h1 {
+    font-size: 2rem;
+    margin: 0;
+    background: linear-gradient(45deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Added standard property for broader browser support */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu a {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* Menu Toggle para móvil */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 2rem;
+        transition: 0.3s ease;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: transparent;
+        padding: 0.5rem 0 0.5rem 1rem;
+    }
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-trigger .fa-chevron-down {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.active .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    min-width: 220px;
+    border-radius: 8px;
+    padding: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.dropdown-menu a i {
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    transform: translateX(5px);
+}
+
+/* Estilos específicos para los iconos */
+.dropdown-menu a i.fa-crown {
+    color: #ffd700;
+}
+
+.dropdown-menu a i.fa-magic {
+    color: #9c27b0;
+}
+
+.dropdown-menu a i.fa-cube {
+    color: #2196f3;
+}
+
+.dropdown-menu a i.fa-gem {
+    color: #e91e63;
+}
+
+.dropdown-menu a i.fa-terminal {
+    color: #4caf50;
+}
+
+/* Efecto hover para los iconos */
+.dropdown-menu a:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para el Dropdown de Búsqueda */
+.search-container {
+    position: relative;
+}
+
+.search-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.search-container.active .search-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.search-dropdown input {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Estilos para el Dropdown del Carrito */
+.cart-container {
+    position: relative;
+}
+
+.cart-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.cart-container.active .cart-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cart-empty {
+    text-align: center;
+    padding: 1rem;
+    color: #888;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--accent);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background: var(--primary-red);
+    transform: translateY(-2px);
+}
+
+.form-status {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+}
+
+.form-status .sending {
+    color: #FFC107;
+}
+
+.form-status .success {
+    color: #4CAF50;
+}
+
+.form-status .error {
+    color: #FF5252;
+}
+
+.form-status p {
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Mejorar estilos del formulario */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+#contactForm button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Estilos para submenús */
+.dropdown-submenu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-submenu:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.submenu-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos para items deshabilitados */
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    color: #666 !important;
+}
+
+.disabled:hover {
+    background: none !important;
+    transform: none !important;
+}
+
+/* Mejoras visuales */
+.dropdown-menu a,
+.submenu a {
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover:not(.disabled),
+.submenu a:hover:not(.disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    transform: translateX(5px);
+}
+
+/* Iconos específicos */
+.fa-infinity { color: #ffd700; }
+.fa-clock { color: #2196f3; }
+.fa-tag { color: #e91e63; }
+.fa-sparkles { color: #9c27b0; }
+.fa-paw { color: #ff9800; }
+.fa-hammer { color: #607d8b; }
+.fa-sword { color: #f44336; }
+.fa-paint-brush { color: #4caf50; }
+.fa-copy { color: #00bcd4; }
+
+/* Estilos para la sección del servidor */
+.server-info {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('server-background.jpg') center/cover no-repeat;
+}
+
+.server-header {
+    margin-bottom: 3rem;
+}
+
+.server-header h2 {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.server-description {
+    font-size: 1.2rem;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* Estadísticas del servidor */
+.server-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.stat-card {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    min-width: 250px;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.stat-card h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* IP del servidor */
+.ip-container {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 68, 68, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 220px;
+}
+
+.ip-container:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(255, 68, 68, 0.15);
+}
+
+.ip-container.copied {
+    background: rgba(76, 175, 80, 0.15);
+    border-color: #4CAF50;
+    animation: pulse 0.5s ease;
+}
+
+#serverIP {
+    font-family: 'Consolas', monospace;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 68, 68, 0.3);
+}
+
+.ip-container .fa-copy {
+    font-size: 0.9rem;
+    padding: 4px;
+    background: rgba(255, 68, 68, 0.1);
+    border-radius: 4px;
+}
+
+.ip-container:hover .fa-copy {
+    transform: scale(1.1);
+    background: rgba(255, 68, 68, 0.2);
+}
+
+/* Tooltip más pequeño */
+.tooltip {
+    position: absolute;
+    bottom: -30px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 68, 68, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+.ip-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Animación de copiado */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Efecto de brillo al copiar */
+.ip-container::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--accent), #ff8f8f);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ip-container.copied::after {
+    opacity: 0.3;
+    animation: glow 1s ease;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stat-card {
+        padding: 1.2rem;
+        min-width: 200px;
+    }
+
+    .ip-container {
+        max-width: 200px;
+        padding: 0.5rem 0.8rem;
+    }
+
+    #serverIP {
+        font-size: 0.9rem;
+    }
+}
+
+.version-text {
+    font-size: 1.2rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Contador de jugadores */
+.player-count {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.separator {
+    color: var(--accent);
+    margin: 0 0.5rem;
+}
+
+/* Estado del servidor */
+.server-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #4caf50;
+}
+
+.server-status.online {
+    color: #4caf50;
+}
+
+/* Enlaces rápidos */
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link.discord {
+    background: #7289da;
+}
+
+.social-link.store {
+    background: #ffd700;
+}
+
+.social-link.wiki {
+    background: #2196f3;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        justify-content: space-between;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 2rem;
+        transition: left 0.3s ease;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-brand .logo {
+        height: 50px;
+    }
+    
+    .nav-brand h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilos para la sección de rangos */
+.ranks-section {
+    padding-top: 120px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 10px rgba(255, 68, 68, 0.3);
+}
+
+/* Estilos para el rango destacado (INFERNO+) */
+.rank-card.featured {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.featured-rank .claus-card {
+    max-width: 600px;
+    margin: 0 auto;
+    transform: scale(0.95);
+}
+
+.featured-rank .claus-card:hover {
+    transform: scale(0.98);
+}
+
+.featured-rank .claus-card .rank-header {
+    padding: 15px;
+}
+
+.featured-rank .claus-card .rank-content {
+    padding: 20px;
+}
+
+.featured-rank .claus-card .rank-features li {
+    padding: 8px 12px;
+    margin-bottom: 4px;
+}
+
+/* Categorías de rangos */
+.ranks-category {
+    margin-bottom: 4rem;
+}
+
+.category-title {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent);
+}
+
+/* Grid de rangos */
+.ranks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de rangos */
+.rank-card {
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rank-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 68, 68, 0.2);
+}
+
+/* Cabecera de los rangos */
+.rank-header {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.rank-crown {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #FFD700;
+}
+
+.rank-header h4 {
+    font-size: 2rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.rank-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+}
+
+/* Gradientes mejorados para los headers */
+.rank-header.inferno-plus {
+    background: linear-gradient(135deg, #FF0000, #FF4500);
+}
+
+.rank-header.inferno {
+    background: linear-gradient(135deg, #FF4500, #FF6347);
+}
+
+.rank-header.claus {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    height: 200px; /* Ajusta según necesites */
+    width: 100%;
+}
+
+.rank-image.claus-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.rank-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.rank-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.rank-info .rank-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Contenido de los rangos */
+.rank-content {
+    padding: 2rem;
+    color: #fff;
+}
+
+.rank-badge {
+    background: rgba(255, 68, 68, 0.1);
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.rank-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.rank-features li {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rank-features li i {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+/* Botón de compra */
+.buy-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.buy-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 68, 68, 0.3);
+}
+
+/* Rangos temporales */
+.temporal-section {
+    background: rgba(64, 224, 208, 0.05);
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin-top: 4rem;
+    border: 1px solid rgba(64, 224, 208, 0.1);
+}
+
+.rank-card.temporal {
+    border: 1px solid rgba(64, 224, 208, 0.2);
+}
+
+.rank-card.temporal:hover {
+    box-shadow: 0 10px 30px rgba(64, 224, 208, 0.2);
+}
+
+.rank-duration {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 1rem 0;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ranks-section {
+        padding: 4rem 1rem;
+    }
+
+    .rank-card.featured {
+        transform: none;
+        margin-bottom: 2rem;
+    }
+
+    .ranks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rank-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Estilos para la sección de cosméticos */
+.cosmetics-section {
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('cosmetics-background.jpg') center/cover no-repeat fixed;
+}
+
+.cosmetics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.cosmetic-card {
+    background: rgba(20, 20, 20, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cosmetic-header {
+    padding: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.cosmetic-header.tag-basic {
+    background: linear-gradient(45deg, #607D8B, #455A64);
+}
+
+.cosmetic-header.tag-premium {
+    background: linear-gradient(45deg, #F44336, #D32F2F);
+}
+
+.cosmetic-header.tag-custom {
+    background: linear-gradient(45deg, #9C27B0, #7B1FA2);
+}
+
+.tag-preview {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.tag-example {
+    font-weight: bold;
+}
+
+.tag-example.premium {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tag-example.custom {
+    background: linear-gradient(45deg, #FF1493, #00BFFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 3s linear infinite;
+}
+
+/* Sección Próximamente */
+.coming-soon {
+    margin-top: 4rem;
+}
+
+.coming-soon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.coming-soon-card {
+    background: rgba(20, 20, 20, 0.8);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.coming-soon-card i {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.coming-soon-card h4 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.coming-soon-card p {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cosmetics-section {
+        padding: 5rem 1rem 3rem;
+    }
+
+    .cosmetics-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .cosmetic-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Estilos para la sección de ítems */
+.items-section {
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('items-background.jpg') center/cover no-repeat fixed;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.item-card {
+    background: rgba(20, 20, 20, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 68, 68, 0.2);
+}
+
+/* Headers de Kits */
+.item-header.kit-pvp {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+}
+
+.item-header.kit-miner {
+    background: linear-gradient(45deg, #ffd700, #ffa000);
+}
+
+.item-header.kit-builder {
+    background: linear-gradient(45deg, #4caf50, #388e3c);
+}
+
+/* Headers de Llaves */
+.item-header.key-common {
+    background: linear-gradient(45deg, #78909c, #546e7a);
+}
+
+.item-header.key-rare {
+    background: linear-gradient(45deg, #2196f3, #1976d2);
+}
+
+.item-header.key-legendary {
+    background: linear-gradient(45deg, #9c27b0, #7b1fa2);
+}
+
+.item-header {
+    padding: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.item-header h4 {
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.item-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.item-content {
+    padding: 1.5rem;
+}
+
+.item-image {
+    width: 100%;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Estilos para las llaves */
+.key-preview {
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+}
+
+.key-preview.common i {
+    color: #90a4ae;
+}
+
+.key-preview.rare i {
+    color: #2196f3;
+}
+
+.key-preview.legendary i {
+    color: #9c27b0;
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px currentColor);
+    }
+    50% {
+        filter: drop-shadow(0 0 20px currentColor);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .items-section {
+        padding: 5rem 1rem 3rem;
+    }
+
+    .items-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .item-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Estilos para la sección de comandos */
+.commands-section {
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('commands-background.jpg') center/cover no-repeat fixed;
+}
+
+.commands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.command-card {
+    background: rgba(20, 20, 20, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.command-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 68, 68, 0.2);
+}
+
+.command-header {
+    padding: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.command-header.basic {
+    background: linear-gradient(45deg, #607d8b, #455a64);
+}
+
+.command-header.premium {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+}
+
+.command-header h4 {
+    font-family: 'Consolas', monospace;
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.command-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.command-content {
+    padding: 1.5rem;
+}
+
+.command-description {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.command-description i {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.command-description p {
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.command-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.command-features li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+}
+
+.command-features li i {
+    color: var(--accent);
+}
+
+.command-features li i.fa-exclamation {
+    color: #ffd700;
+}
+
+/* Efectos especiales para comandos premium */
+.command-card.premium {
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.command-card.premium:hover {
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+}
+
+.command-card.premium .command-header h4 {
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .commands-section {
+        padding: 5rem 1rem 3rem;
+    }
+
+    .commands-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .command-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .command-header h4 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ajuste del scroll suave */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Altura del navbar + padding */
+}
+
+/* Estilos para las secciones de rangos */
+#permanentes, #temporales {
+    scroll-margin-top: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        padding-left: 2rem;
+        min-width: auto;
+    }
+    
+    .dropdown-submenu > a > .fa-chevron-right {
+        transform: rotate(90deg);
+    }
+}
+
+/* Ajustes para el scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+.ranks-container {
+    padding-top: 80px; /* Espacio para el navbar fijo */
+    margin-top: -80px; /* Compensar el padding */
+}
+
+/* Estilos para los enlaces activos */
+.dropdown-menu a:hover {
+    color: var(--accent);
+    background: rgba(255, 68, 68, 0.1);
+    border-radius: 4px;
+}
+
+/* Ajuste del dropdown */
+.dropdown-menu {
+    padding: 0.5rem;
+}
+
+.dropdown-menu li {
+    padding: 0.2rem;
+}
+
+.dropdown-menu a {
+    padding: 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Estilos mejorados para la sección de tags */
+.tags-section {
+    padding: 120px 2rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tags-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.tag-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.tag-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent);
+}
+
+.tag-header {
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tag-header.basic {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+}
+
+.tag-header.premium {
+    background: linear-gradient(45deg, #c0392b, #e74c3c);
+}
+
+.tag-header.custom {
+    background: linear-gradient(45deg, #8e44ad, #9b59b6);
+}
+
+.tag-header h4 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.tag-price {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0,0,0,0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.tag-content {
+    padding: 2rem;
+}
+
+.tag-preview {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.tag-example {
+    font-weight: bold;
+}
+
+.tag-example.basic {
+    color: #3498db;
+}
+
+.tag-example.premium {
+    background: linear-gradient(45deg, #f1c40f, #e74c3c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tag-example.custom {
+    background: linear-gradient(45deg, #ff0099, #00ff99);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 3s linear infinite;
+}
+
+.tag-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.tag-features li {
+    padding: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.tag-features li i {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.buy-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.buy-button:hover {
+    background: #ff6666;
+    transform: scale(1.05);
+}
+
+/* Animación del arcoíris para tags personalizados */
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Efectos hover mejorados */
+.tag-card:hover .tag-header {
+    transform: translateY(-5px);
+}
+
+.tag-card:hover .buy-button {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 68, 68, 0.3);
+}
+
+/* Responsive design mejorado */
+@media (max-width: 768px) {
+    .tags-section {
+        padding: 100px 1rem 2rem;
+    }
+
+    .tags-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .tag-header h4 {
+        font-size: 1.5rem;
+    }
+
+    .tag-price {
+        font-size: 1rem;
+    }
+}
+
+/* Efectos de brillo en hover */
+.tag-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.tag-card:hover::before {
+    left: 100%;
+}
+
+/* Estilo especial para rangos temporales */
+.rank-card.temporal .rank-duration {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Estilos para el rango destacado */
+.rank-card.featured {
+    transform: scale(1.05);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.rank-card.featured:hover {
+    transform: scale(1.08);
+}
+
+.rank-badge.featured {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.buy-button.seasonal {
+    background: linear-gradient(135deg, #D50000, #C51162);
+}
+
+.buy-button.seasonal:hover {
+    background: linear-gradient(135deg, #C51162, #D50000);
+    transform: translateY(-2px);
+}
+
+.rank-notice {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.rank-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.rank-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}

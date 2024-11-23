@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minas Personales - Inferno MC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Copiar el mismo navbar que está en index.html -->
+    <header>
+        <nav class="navbar">
+            <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                    <a href="cosmeticos.html" class="submenu-trigger">
+                        <i class="fas fa-magic"></i> Cosméticos
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="tags.html"><i class="fas fa-tag"></i> Tags</a></li>
+                        <li><a href="#" class="disabled"><i class="fas fa-sparkles"></i> Auras (Próximamente)</a></li>
+                        <li><a href="#" class="disabled"><i class="fas fa-paw"></i> Mascotas (Próximamente)</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a href="items.html" class="submenu-trigger">
+                        <i class="fas fa-cube"></i> Ítems
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="items.html#picos"><i class="fas fa-hammer"></i> Picos</a></li>
+                        <li><a href="items.html#espadas"><i class="fas fa-sword"></i> Espadas</a></li>
+                        <li><a href="#" class="disabled"><i class="fas fa-axe"></i> Hachas (Próximamente)</a></li>
+                        <li><a href="#" class="disabled"><i class="fas fa-bow-arrow"></i> Arcos (Próximamente)</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a href="minas.html" class="submenu-trigger">
+                        <i class="fas fa-gem"></i> Minas personales
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="minas.html#custom"><i class="fas fa-paint-brush"></i> Customizables</a></li>
+                        <li><a href="minas.html#plantilla"><i class="fas fa-copy"></i> Plantilla</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a href="comandos.html" class="submenu-trigger">
+                        <i class="fas fa-terminal"></i> Comandos
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="comandos.html#permanentes"><i class="fas fa-infinity"></i> Permanentes</a></li>
+                        <li><a href="comandos.html#temporales"><i class="fas fa-clock"></i> Temporales</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mines-section">
+            <h2 class="section-title">Minas Personales</h2>
+            
+            <!-- Minas Customizables -->
+            <section id="custom">
+                <h3 class="subsection-title">
+                    <i class="fas fa-paint-brush"></i> Minas Customizables
+                </h3>
+                
+                <div class="mines-grid">
+                    <!-- Aquí va el contenido de las minas customizables -->
+                </div>
+            </section>
+
+            <!-- Minas Plantilla -->
+            <section id="plantilla">
+                <h3 class="subsection-title">
+                    <i class="fas fa-copy"></i> Minas Plantilla
+                </h3>
+                
+                <div class="mines-grid">
+                    <!-- Aquí va el contenido de las minas plantilla -->
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

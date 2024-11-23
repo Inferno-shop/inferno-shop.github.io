@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangos - Inferno MC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="https://cdn.discordapp.com/icons/1234763287120580638/f429266f56834c221ffb03f75f79ebfb.png?size=4096" alt="Logo Inferno" class="logo">
+                <h1>Tienda Inferno</h1>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-trigger">
+                            <i class="fas fa-tags"></i> Categorías <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="rangos.html" class="submenu-trigger">
+                                    <i class="fas fa-crown"></i> Rangos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="rangos.html#permanentes"><i class="fas fa-infinity"></i> Permanentes</a></li>
+                                    <li><a href="rangos.html#temporales"><i class="fas fa-clock"></i> Temporales</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="cosmeticos.html" class="submenu-trigger">
+                                    <i class="fas fa-magic"></i> Cosméticos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="tags.html"><i class="fas fa-tag"></i> Tags</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-sparkles"></i> Auras (Próximamente)</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-paw"></i> Mascotas (Próximamente)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="items.html" class="submenu-trigger">
+                                    <i class="fas fa-cube"></i> Ítems
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="items.html#picos"><i class="fas fa-hammer"></i> Picos</a></li>
+                                    <li><a href="items.html#espadas"><i class="fas fa-sword"></i> Espadas</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-axe"></i> Hachas (Próximamente)</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-bow-arrow"></i> Arcos (Próximamente)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="minas.html" class="submenu-trigger">
+                                    <i class="fas fa-gem"></i> Minas personales
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="minas.html#custom"><i class="fas fa-paint-brush"></i> Customizables</a></li>
+                                    <li><a href="minas.html#plantilla"><i class="fas fa-copy"></i> Plantilla</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="comandos.html" class="submenu-trigger">
+                                    <i class="fas fa-terminal"></i> Comandos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="comandos.html#permanentes"><i class="fas fa-infinity"></i> Permanentes</a></li>
+                                    <li><a href="comandos.html#temporales"><i class="fas fa-clock"></i> Temporales</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ranks-section">
+            <!-- Rango Destacado -->
+            <div class="featured-rank">
+                <div class="rank-card claus-card featured">
+                    <div class="rank-header claus">
+                        <img src="https://cdn.discordapp.com/attachments/1303128379842891786/1308587546971734157/IMG_0519.png?ex=6742711f&is=67411f9f&hm=27ca6ba7c8d981c0114def31137a2b36684a59d06ade0a353381711a441385d9&" 
+                            alt="Rango Claus" 
+                            class="rank-image claus-image">
+                        <div class="rank-info">
+                            <h3>Rango Claus</h3>
+                            <span class="rank-price">$22.00 USD</span>
+                        </div>
+                    </div>
+                    <div class="rank-content">
+                        <div class="rank-badge featured">
+                            <i class="fas fa-star"></i> RANGO EXCLUSIVO NAVIDEÑO
+                        </div>
+                        <ul class="rank-features">
+                            <li><i class="fas fa-check"></i> Kit Claus</li>
+                            <li><i class="fas fa-check"></i> Prefix [CLAUS]</li>
+                            <li><i class="fas fa-check"></i> Acceso a todas las minas premium</li>
+                            <li><i class="fas fa-check"></i> Comando /back</li>
+                            <li><i class="fas fa-check"></i> Comando /ec</li>
+                            <li><i class="fas fa-check"></i> Comando /fly</li>
+                            <li><i class="fas fa-check"></i> Comando /feed</li>
+                            <li><i class="fas fa-check"></i> Comando /hat</li>
+                            <li><i class="fas fa-check"></i> Comando /heal</li>
+                            <li><i class="fas fa-check"></i> Comando /fix</li>
+                            <li><i class="fas fa-check"></i> Comando /craft</li>
+                            <li><i class="fas fa-check"></i> Comando /anvil</li>
+                            <li><i class="fas fa-check"></i> 10 PV extras</li>
+                            <li><i class="fas fa-check"></i> Sin cooldown por teletransporte</li>
+                            <li><i class="fas fa-check"></i> Chat con códigos de colores</li>
+                        </ul>
+                        <div class="rank-notice">
+                            <i class="fas fa-exclamation-circle"></i> DISPONIBLE SOLO EN NAVIDAD
+                        </div>
+                        <button class="buy-button seasonal">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rangos Permanentes -->
+            <div class="ranks-container permanent">
+                <h3 class="category-title">Rangos Permanentes</h3>
+                <div class="ranks-grid">
+                    <!-- CHAOTIC -->
+                    <div class="rank-card">
+                        <div class="rank-header chaotic">
+                            <div class="rank-crown"><i class="fas fa-skull"></i></div>
+                            <h4>CHAOTIC</h4>
+                            <span class="rank-price">$12.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-star"></i> Incluye beneficios de BELCEBÚ</li>
+                                <li><i class="fas fa-check"></i> Kit Chaotic</li>
+                                <li><i class="fas fa-check"></i> Prefix [CHAOTIC]</li>
+                                <li><i class="fas fa-check"></i> Acceso Mina Chaotic</li>
+                                <li><i class="fas fa-check"></i> Chat con códigos de colores</li>
+                                <li><i class="fas fa-check"></i> Comando /fly</li>
+                                <li><i class="fas fa-check"></i> 8 PV extras</li>
+                                <li><i class="fas fa-check"></i> 6 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- INFERNO+ -->
+                    <div class="rank-card">
+                        <div class="rank-header inferno-plus">
+                            <div class="rank-crown"><i class="fas fa-crown"></i></div>
+                            <h4>INFERNO+</h4>
+                            <span class="rank-price">$20.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-star"></i> Incluye beneficios de CHAOTIC</li>
+                                <li><i class="fas fa-check"></i> Kit Inferno+</li>
+                                <li><i class="fas fa-check"></i> Prefix INFERNO+</li>
+                                <li><i class="fas fa-check"></i> Acceso Mina Inferno+</li>
+                                <li><i class="fas fa-check"></i> Chat con códigos de colores</li>
+                                <li><i class="fas fa-check"></i> Comando /fly sin cooldown</li>
+                                <li><i class="fas fa-check"></i> 10 PV extras</li>
+                                <li><i class="fas fa-check"></i> 8 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- INFERNO -->
+                    <div class="rank-card">
+                        <div class="rank-header inferno">
+                            <div class="rank-crown"><i class="fas fa-fire"></i></div>
+                            <h4>INFERNO</h4>
+                            <span class="rank-price">$15.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-star"></i> Incluye beneficios de CHAOTIC</li>
+                                <li><i class="fas fa-check"></i> Kit Inferno</li>
+                                <li><i class="fas fa-check"></i> Prefix INFERNO</li>
+                                <li><i class="fas fa-check"></i> Acceso Mina Inferno</li>
+                                <li><i class="fas fa-check"></i> Chat con códigos de colores</li>
+                                <li><i class="fas fa-check"></i> Comando /fly (2h cooldown)</li>
+                                <li><i class="fas fa-check"></i> 9 PV extras</li>
+                                <li><i class="fas fa-check"></i> 7 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- BELCEBÚ -->
+                    <div class="rank-card">
+                        <div class="rank-header belcebu">
+                            <div class="rank-crown"><i class="fas fa-dragon"></i></div>
+                            <h4>BELCEBÚ</h4>
+                            <span class="rank-price">$7.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-star"></i> Incluye beneficios de MEPHISTO</li>
+                                <li><i class="fas fa-check"></i> Kit Belcebú</li>
+                                <li><i class="fas fa-check"></i> Prefix BELCEBÚ</li>
+                                <li><i class="fas fa-check"></i> Acceso Mina Belcebú</li>
+                                <li><i class="fas fa-check"></i> Sin cooldown por teletransporte</li>
+                                <li><i class="fas fa-check"></i> Telekinesis permanente (/telekinesis)</li>
+                                <li><i class="fas fa-check"></i> Comando /fix</li>
+                                <li><i class="fas fa-check"></i> 6 PV extras</li>
+                                <li><i class="fas fa-check"></i> 5 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- MEPHISTO -->
+                    <div class="rank-card">
+                        <div class="rank-header mephisto">
+                            <div class="rank-crown"><i class="fas fa-ghost"></i></div>
+                            <h4>MEPHISTO</h4>
+                            <span class="rank-price">$5.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-star"></i> Incluye beneficios de X-MASS</li>
+                                <li><i class="fas fa-check"></i> Kit Mephisto</li>
+                                <li><i class="fas fa-check"></i> Prefix Mephisto</li>
+                                <li><i class="fas fa-check"></i> Acceso Mina Mephisto</li>
+                                <li><i class="fas fa-check"></i> Comando /back</li>
+                                <li><i class="fas fa-check"></i> Comando /endechest</li>
+                                <li><i class="fas fa-check"></i> 4 PV extras</li>
+                                <li><i class="fas fa-check"></i> 4 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- X-MASS -->
+                    <div class="rank-card">
+                        <div class="rank-header xmass">
+                            <div class="rank-crown"><i class="fas fa-tree"></i></div>
+                            <h4>X-MASS</h4>
+                            <span class="rank-price">$2.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-check"></i> Kit X-Mass</li>
+                                <li><i class="fas fa-check"></i> Prefix X-Mass</li>
+                                <li><i class="fas fa-check"></i> Acceso mina X-Mass</li>
+                                <li><i class="fas fa-check"></i> Comando /hat</li>
+                                <li><i class="fas fa-check"></i> Comando /craft</li>
+                                <li><i class="fas fa-check"></i> Comando /loom</li>
+                                <li><i class="fas fa-check"></i> 2 PV extras</li>
+                                <li><i class="fas fa-check"></i> 3 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rangos Temporales -->
+            <div class="ranks-container temporal">
+                <h3 class="category-title">Rangos Temporales</h3>
+                <div class="ranks-grid">
+                    <!-- INFERNO+ Temporal -->
+                    <div class="rank-card temporal">
+                        <div class="rank-header inferno-plus">
+                            <div class="rank-crown"><i class="fas fa-crown"></i></div>
+                            <h4>INFERNO+</h4>
+                            <div class="rank-duration">
+                                <i class="fas fa-clock"></i> 30 días
+                            </div>
+                            <span class="rank-price">$20.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-star"></i> Incluye beneficios de CHAOTIC</li>
+                                <li><i class="fas fa-check"></i> Kit Inferno+</li>
+                                <li><i class="fas fa-check"></i> Prefix INFERNO+</li>
+                                <li><i class="fas fa-check"></i> Acceso Mina Inferno+</li>
+                                <li><i class="fas fa-check"></i> Chat con códigos de colores</li>
+                                <li><i class="fas fa-check"></i> Comando /fly sin cooldown</li>
+                                <li><i class="fas fa-check"></i> 10 PV extras</li>
+                                <li><i class="fas fa-check"></i> 8 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- INFERNO Temporal -->
+                    <div class="rank-card temporal">
+                        <div class="rank-header inferno">
+                            <div class="rank-crown"><i class="fas fa-fire"></i></div>
+                            <h4>INFERNO</h4>
+                            <div class="rank-duration">
+                                <i class="fas fa-clock"></i> 30 días
+                            </div>
+                            <span class="rank-price">$15.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-star"></i> Incluye beneficios de CHAOTIC</li>
+                                <li><i class="fas fa-check"></i> Kit Inferno</li>
+                                <li><i class="fas fa-check"></i> Prefix INFERNO</li>
+                                <li><i class="fas fa-check"></i> Acceso Mina Inferno</li>
+                                <li><i class="fas fa-check"></i> Chat con códigos de colores</li>
+                                <li><i class="fas fa-check"></i> Comando /fly (2h cooldown)</li>
+                                <li><i class="fas fa-check"></i> 9 PV extras</li>
+                                <li><i class="fas fa-check"></i> 7 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CHAOTIC Temporal -->
+                    <div class="rank-card temporal">
+                        <div class="rank-header chaotic">
+                            <div class="rank-crown"><i class="fas fa-skull"></i></div>
+                            <h4>CHAOTIC</h4>
+                            <div class="rank-duration">
+                                <i class="fas fa-clock"></i> 30 días
+                            </div>
+                            <span class="rank-price">$12.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-star"></i> Incluye beneficios de BELCEBÚ</li>
+                                <li><i class="fas fa-check"></i> Kit Chaotic</li>
+                                <li><i class="fas fa-check"></i> Prefix CHAOTIC</li>
+                                <li><i class="fas fa-check"></i> Acceso Mina Chaotic</li>
+                                <li><i class="fas fa-check"></i> Chat con códigos de colores</li>
+                                <li><i class="fas fa-check"></i> Comando /fly</li>
+                                <li><i class="fas fa-check"></i> 8 PV extras</li>
+                                <li><i class="fas fa-check"></i> 6 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- BELCEBÚ Temporal -->
+                    <div class="rank-card temporal">
+                        <div class="rank-header belcebu">
+                            <div class="rank-crown"><i class="fas fa-dragon"></i></div>
+                            <h4>BELCEBÚ</h4>
+                            <div class="rank-duration">
+                                <i class="fas fa-clock"></i> 30 días
+                            </div>
+                            <span class="rank-price">$7.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-star"></i> Incluye beneficios de MEPHISTO</li>
+                                <li><i class="fas fa-check"></i> Kit Belcebú</li>
+                                <li><i class="fas fa-check"></i> Prefix BELCEBÚ</li>
+                                <li><i class="fas fa-check"></i> Acceso Mina Belcebú</li>
+                                <li><i class="fas fa-check"></i> Sin cooldown por teletransporte</li>
+                                <li><i class="fas fa-check"></i> Telekinesis permanente (/telekinesis)</li>
+                                <li><i class="fas fa-check"></i> Comando /fix</li>
+                                <li><i class="fas fa-check"></i> 6 PV extras</li>
+                                <li><i class="fas fa-check"></i> 5 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- MEPHISTO Temporal -->
+                    <div class="rank-card temporal">
+                        <div class="rank-header mephisto">
+                            <div class="rank-crown"><i class="fas fa-ghost"></i></div>
+                            <h4>MEPHISTO</h4>
+                            <div class="rank-duration">
+                                <i class="fas fa-clock"></i> 30 días
+                            </div>
+                            <span class="rank-price">$5.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-star"></i> Incluye beneficios de X-MASS</li>
+                                <li><i class="fas fa-check"></i> Kit Mephisto</li>
+                                <li><i class="fas fa-check"></i> Prefix Mephisto</li>
+                                <li><i class="fas fa-check"></i> Acceso Mina Mephisto</li>
+                                <li><i class="fas fa-check"></i> Comando /back</li>
+                                <li><i class="fas fa-check"></i> Comando /endechest</li>
+                                <li><i class="fas fa-check"></i> 4 PV extras</li>
+                                <li><i class="fas fa-check"></i> 4 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- X-MASS Temporal -->
+                    <div class="rank-card temporal">
+                        <div class="rank-header xmass">
+                            <div class="rank-crown"><i class="fas fa-tree"></i></div>
+                            <h4>X-MASS</h4>
+                            <div class="rank-duration">
+                                <i class="fas fa-clock"></i> 30 días
+                            </div>
+                            <span class="rank-price">$2.00 USD</span>
+                        </div>
+                        <div class="rank-content">
+                            <ul class="rank-features">
+                                <li><i class="fas fa-check"></i> Kit X-Mass</li>
+                                <li><i class="fas fa-check"></i> Prefix X-Mass</li>
+                                <li><i class="fas fa-check"></i> Acceso mina X-Mass</li>
+                                <li><i class="fas fa-check"></i> Comando /hat</li>
+                                <li><i class="fas fa-check"></i> Comando /craft</li>
+                                <li><i class="fas fa-check"></i> Comando /loom</li>
+                                <li><i class="fas fa-check"></i> 2 PV extras</li>
+                                <li><i class="fas fa-check"></i> 3 homes</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 

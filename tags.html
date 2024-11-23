@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags - Inferno MC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="https://cdn.discordapp.com/icons/1234763287120580638/f429266f56834c221ffb03f75f79ebfb.png?size=4096" alt="Logo Inferno" class="logo">
+                <h1>Tienda Inferno</h1>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-trigger">
+                            <i class="fas fa-tags"></i> Categorías <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="rangos.html" class="submenu-trigger">
+                                    <i class="fas fa-crown"></i> Rangos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="rangos.html#permanentes"><i class="fas fa-infinity"></i> Permanentes</a></li>
+                                    <li><a href="rangos.html#temporales"><i class="fas fa-clock"></i> Temporales</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="cosmeticos.html" class="submenu-trigger">
+                                    <i class="fas fa-magic"></i> Cosméticos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="tags.html"><i class="fas fa-tag"></i> Tags</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-sparkles"></i> Auras (Próximamente)</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-paw"></i> Mascotas (Próximamente)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="items.html" class="submenu-trigger">
+                                    <i class="fas fa-cube"></i> Ítems
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="items.html#picos"><i class="fas fa-hammer"></i> Picos</a></li>
+                                    <li><a href="items.html#espadas"><i class="fas fa-sword"></i> Espadas</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-axe"></i> Hachas (Próximamente)</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-bow-arrow"></i> Arcos (Próximamente)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="minas.html" class="submenu-trigger">
+                                    <i class="fas fa-gem"></i> Minas personales
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="minas.html#custom"><i class="fas fa-paint-brush"></i> Customizables</a></li>
+                                    <li><a href="minas.html#plantilla"><i class="fas fa-copy"></i> Plantilla</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="comandos.html" class="submenu-trigger">
+                                    <i class="fas fa-terminal"></i> Comandos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="comandos.html#permanentes"><i class="fas fa-infinity"></i> Permanentes</a></li>
+                                    <li><a href="comandos.html#temporales"><i class="fas fa-clock"></i> Temporales</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tags-section">
+            <h2 class="section-title">Tags Personalizados</h2>
+            
+            <div class="tags-container">
+                <!-- Tag Básico -->
+                <div class="tag-card">
+                    <div class="tag-header basic">
+                        <h4>Tag Básico</h4>
+                        <span class="tag-price">$3.00 USD</span>
+                    </div>
+                    <div class="tag-content">
+                        <div class="tag-preview">
+                            <span class="tag-example">[Tag]</span> Jugador
+                        </div>
+                        <ul class="tag-features">
+                            <li><i class="fas fa-check"></i> Un color</li>
+                            <li><i class="fas fa-check"></i> Máximo 10 caracteres</li>
+                            <li><i class="fas fa-check"></i> Sin símbolos especiales</li>
+                        </ul>
+                        <button class="buy-button">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tag Premium -->
+                <div class="tag-card">
+                    <div class="tag-header premium">
+                        <h4>Tag Premium</h4>
+                        <span class="tag-price">$5.00 USD</span>
+                    </div>
+                    <div class="tag-content">
+                        <div class="tag-preview">
+                            <span class="tag-example premium">[★Tag★]</span> Jugador
+                        </div>
+                        <ul class="tag-features">
+                            <li><i class="fas fa-check"></i> Múltiples colores</li>
+                            <li><i class="fas fa-check"></i> Máximo 15 caracteres</li>
+                            <li><i class="fas fa-check"></i> Símbolos básicos</li>
+                            <li><i class="fas fa-check"></i> Gradientes de color</li>
+                        </ul>
+                        <button class="buy-button">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tag Personalizado -->
+                <div class="tag-card">
+                    <div class="tag-header custom">
+                        <h4>Tag Personalizado</h4>
+                        <span class="tag-price">$8.00 USD</span>
+                    </div>
+                    <div class="tag-content">
+                        <div class="tag-preview">
+                            <span class="tag-example custom">「❀Tag❀」</span> Jugador
+                        </div>
+                        <ul class="tag-features">
+                            <li><i class="fas fa-check"></i> Colores RGB</li>
+                            <li><i class="fas fa-check"></i> Máximo 20 caracteres</li>
+                            <li><i class="fas fa-check"></i> Símbolos especiales</li>
+                            <li><i class="fas fa-check"></i> Animaciones</li>
+                            <li><i class="fas fa-check"></i> Diseño personalizado</li>
+                        </ul>
+                        <button class="buy-button">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

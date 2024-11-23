@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ítems - Inferno MC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="https://cdn.discordapp.com/icons/1234763287120580638/f429266f56834c221ffb03f75f79ebfb.png?size=4096" alt="Logo Inferno" class="logo">
+                <h1>Tienda Inferno</h1>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-trigger">
+                            <i class="fas fa-tags"></i> Categorías <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="rangos.html" class="submenu-trigger">
+                                    <i class="fas fa-crown"></i> Rangos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="rangos.html#permanentes"><i class="fas fa-infinity"></i> Permanentes</a></li>
+                                    <li><a href="rangos.html#temporales"><i class="fas fa-clock"></i> Temporales</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="cosmeticos.html" class="submenu-trigger">
+                                    <i class="fas fa-magic"></i> Cosméticos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="tags.html"><i class="fas fa-tag"></i> Tags</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-sparkles"></i> Auras (Próximamente)</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-paw"></i> Mascotas (Próximamente)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="items.html" class="submenu-trigger">
+                                    <i class="fas fa-cube"></i> Ítems
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="items.html#picos"><i class="fas fa-hammer"></i> Picos</a></li>
+                                    <li><a href="items.html#espadas"><i class="fas fa-sword"></i> Espadas</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-axe"></i> Hachas (Próximamente)</a></li>
+                                    <li><a href="#" class="disabled"><i class="fas fa-bow-arrow"></i> Arcos (Próximamente)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="minas.html" class="submenu-trigger">
+                                    <i class="fas fa-gem"></i> Minas personales
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="minas.html#custom"><i class="fas fa-paint-brush"></i> Customizables</a></li>
+                                    <li><a href="minas.html#plantilla"><i class="fas fa-copy"></i> Plantilla</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a href="comandos.html" class="submenu-trigger">
+                                    <i class="fas fa-terminal"></i> Comandos
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="comandos.html#permanentes"><i class="fas fa-infinity"></i> Permanentes</a></li>
+                                    <li><a href="comandos.html#temporales"><i class="fas fa-clock"></i> Temporales</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="items-section">
+            <h2 class="section-title">Ítems Especiales</h2>
+            
+            <!-- Picos -->
+            <section id="picos">
+                <h3 class="subsection-title">
+                    <i class="fas fa-hammer"></i> Picos
+                </h3>
+                
+                <div class="items-grid">
+                    <!-- Pico Básico -->
+                    <div class="item-card">
+                        <div class="item-header basic">
+                            <h4>Pico Básico</h4>
+                            <span class="item-price">$5.00 USD</span>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-image">
+                                <img src="images/basic-pickaxe.png" alt="Pico Básico">
+                            </div>
+                            <ul class="item-features">
+                                <li><i class="fas fa-check"></i> Eficiencia V</li>
+                                <li><i class="fas fa-check"></i> Irrompible</li>
+                                <li><i class="fas fa-check"></i> Fortuna III</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pico Avanzado -->
+                    <div class="item-card">
+                        <div class="item-header premium">
+                            <h4>Pico Avanzado</h4>
+                            <span class="item-price">$10.00 USD</span>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-image">
+                                <img src="images/advanced-pickaxe.png" alt="Pico Avanzado">
+                            </div>
+                            <ul class="item-features">
+                                <li><i class="fas fa-check"></i> Eficiencia X</li>
+                                <li><i class="fas fa-check"></i> Irrompible</li>
+                                <li><i class="fas fa-check"></i> Fortuna V</li>
+                                <li><i class="fas fa-check"></i> Auto-Reparación</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Espadas -->
+            <section id="espadas">
+                <h3 class="subsection-title">
+                    <i class="fas fa-sword"></i> Espadas
+                </h3>
+                
+                <div class="items-grid">
+                    <!-- Espada Básica -->
+                    <div class="item-card">
+                        <div class="item-header basic">
+                            <h4>Espada Básica</h4>
+                            <span class="item-price">$5.00 USD</span>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-image">
+                                <img src="images/basic-sword.png" alt="Espada Básica">
+                            </div>
+                            <ul class="item-features">
+                                <li><i class="fas fa-check"></i> Filo V</li>
+                                <li><i class="fas fa-check"></i> Irrompible</li>
+                                <li><i class="fas fa-check"></i> Aspecto Ígneo II</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Espada Avanzada -->
+                    <div class="item-card">
+                        <div class="item-header premium">
+                            <h4>Espada Avanzada</h4>
+                            <span class="item-price">$10.00 USD</span>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-image">
+                                <img src="images/advanced-sword.png" alt="Espada Avanzada">
+                            </div>
+                            <ul class="item-features">
+                                <li><i class="fas fa-check"></i> Filo X</li>
+                                <li><i class="fas fa-check"></i> Irrompible</li>
+                                <li><i class="fas fa-check"></i> Aspecto Ígneo V</li>
+                                <li><i class="fas fa-check"></i> Maldición de Desaparición</li>
+                            </ul>
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
